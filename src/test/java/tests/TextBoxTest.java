@@ -5,7 +5,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class TextBoxTest {
@@ -23,7 +22,7 @@ public class TextBoxTest {
         $("#lastName").setValue("Gorban");
         $("#userEmail").setValue("vgorban00@mail.ru");
         $("[for = gender-radio-1]").click();
-        $("#userNumber").setValue("89143511609");
+        $("#userNumber").setValue("8914351160");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("March");
         $(".react-datepicker__year-select").selectOption("1999");
@@ -44,13 +43,13 @@ public class TextBoxTest {
         $(".table tbody tr:nth-child(1) td:nth-child(2)").shouldHave(text("Vadim Gorban"));
         $(".table tbody tr:nth-child(2) td:nth-child(2)").shouldHave(text("vgorban00@mail.ru"));
         $(".table tbody tr:nth-child(3) td:nth-child(2)").shouldHave(text("Male"));
-        $(".table tbody tr:nth-child(4) td:nth-child(2)").shouldHave(text("89143511609"));
+        $(".table tbody tr:nth-child(4) td:nth-child(2)").shouldHave(text("8914351160"));
         $(".table tbody tr:nth-child(5) td:nth-child(2)").shouldHave(text("30 March,1999"));
         $(".table tbody tr:nth-child(6) td:nth-child(2)").shouldHave(text("English"));
         $(".table tbody tr:nth-child(7) td:nth-child(2)").shouldHave(text("Sports, Music"));
         $(".table tbody tr:nth-child(8) td:nth-child(2)").shouldHave(text("blue-paint-textured-background-aesthetic-diy-experimental-art (1).jpg"));
         $(".table tbody tr:nth-child(9) td:nth-child(2)").shouldHave(text("Chita, 1 mkr., 24, 26"));
-        $(".table tbody tr:nth-child(10) td:nth-child(2)").shouldHave(text("Haryana Karnal"));
+        $(".table tbody tr:nth-child(10) td:nth-child(2)").shouldHave(text("NCR Delhi"));
 
         sleep(4000);
     }
